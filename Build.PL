@@ -7,8 +7,10 @@ my $builder = Module::Build
          , dist_author        => 'Jarrod Linahan <txh@cpan.org>',
          , license            => 'perl'
          , requires           => { 
-            perl => '>= 5.0.0'
-            , 'Template::Plugin::Filter' => '> 0'
+            'Template::Plugin::Filter' => 0
+         }
+         , build_requires     => {
+            'Module::Build' => "0.3601",
          }
          , dist_version => '0.01'
          , create_makefile_pl => 'traditional'
