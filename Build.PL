@@ -9,7 +9,7 @@ my $builder = Module::Build
          , requires           => { 
             'Template::Plugin::Filter' => 0
          }
-         , build_requires     => {
+         , configure_requires => {
             'Module::Build' => "0.3601",
          }
          , dist_version => '0.01'
