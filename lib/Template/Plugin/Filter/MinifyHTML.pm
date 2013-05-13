@@ -60,7 +60,7 @@ This is a Template Toolkit filter which uses a few quick and nasty regexes to mi
 
 Be sure to [% USE Filter.MinifyHTML %] in your template, then you're able to wrap [% FILTER minify_html %][% END %] around blocks that you would like to minify.
 
-Filter.MinyfyHTML can currently take two arguments - comments and html5.
+Filter.MinifyHTML can currently take two arguments - comments and html5.
        
 =head2 COMMENTS
 
