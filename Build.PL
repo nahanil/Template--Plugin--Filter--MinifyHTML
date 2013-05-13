@@ -12,7 +12,7 @@ my $builder = Module::Build
          , configure_requires => {
             'Module::Build' => "0.3601",
          }
-         , dist_version => '0.01'
+         , dist_version => '0.02'
          , create_makefile_pl => 'traditional'
        );
 $builder->create_build_script;  #generate Build
