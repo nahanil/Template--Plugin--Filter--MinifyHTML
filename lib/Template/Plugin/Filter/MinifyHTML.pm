@@ -1,6 +1,6 @@
 package Template::Plugin::Filter::MinifyHTML;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Template::Plugin::Filter;
 use base qw( Template::Plugin::Filter );
@@ -18,7 +18,7 @@ sub filter {
   for ($text) {
     s/^\s+//;     # Leading Whitespace
     s/\s+$//;     # Trailing Whitespace
-    s/\s+/ /g;    # More than one space
+    s/[ \r\n\t]+/ /g;    # More than one space
     s/>\s+</></g; # Fix > <
 
     s/\s*\/>/>/g # Remove trailing / on self-closing elements
