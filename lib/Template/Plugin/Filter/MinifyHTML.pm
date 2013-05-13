@@ -56,6 +56,21 @@ version 0.01
  
 This is a Template Toolkit filter which uses a few quick and nasty regexes to minify HTML source code. It's built upon the idea/workings of the default 'collapse' filter, but adds a little spice of its own into the mix, removing HTML comments and a few other bits and pieces.
 
+=head1 USAGE
+
+Be sure to [% USE Filter.MinifyHTML %] in your template, then you're able to wrap [% FILTER minify_html %][% END %] around blocks that you would like to minify.
+
+Filter.MinyfyHTML can currently take two arguments - comments and html5.
+       
+=head2 COMMENTS
+
+If comments is set to a truesy value it will remove any HTML comments it finds (<!-- ... -->). It shouldn't affect any conditional comments in your markup (ie. <!--[if lt IE 9]><link href="/static/css/custom-ie.css" rel="stylesheet"><![endif]-->).
+
+=head2 HTML5
+
+If html5 is truesy, then it will remove the trailing slash on self-closing elements (<br />, <input />, etc).
+
+
 =head1 BUYER BEWARE
 
 This filter does not check for or acknowledge the existence or importance of tags such as <pre> or <textarea>. As such, any whitespace within these tags *WILL* be royally messed up by this module in its current state.
